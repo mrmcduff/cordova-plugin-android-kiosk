@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-android-kiosk" version="0.0.1" 
-    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+<plugin id="cordova-plugin-android-kiosk-nohome" version="0.0.1"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <name>Kiosk</name>
 
@@ -21,9 +21,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <!-- Handler of app icon (required to be launcher) -->
-                <category android:name="android.intent.category.HOME" />
-                <!-- Handler of Home button -->
             </intent-filter>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest/application">

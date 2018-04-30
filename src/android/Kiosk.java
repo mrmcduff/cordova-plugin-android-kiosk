@@ -39,9 +39,6 @@ public class Kiosk extends CordovaPlugin {
         } else if (action.equals("isLocked")) {
             callbackContext.success(String.valueOf(mIsKioskEnabled));
             return true;
-        } else if (action.equals("switchLauncher")) {
-            switchLauncher(callbackContext);
-            return true;
         } else if (action.equals("deleteDeviceAdmin")) {
             deleteDeviceAdmin();
         }
@@ -89,21 +86,6 @@ public class Kiosk extends CordovaPlugin {
                                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
             }
         });
-    }
-
-    private void switchLauncher(CallbackContext callbackContext) {
-        if (mIsKioskEnabled) {
-            lockLauncher(false);
-        }
-        Intent intent = new Intent(Intent.ACTION_MAIN);
-        intent.addCategory(Intent.CATEGORY_HOME);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-
-        Intent chooser = Intent.createChooser(intent, "Select destination...");
-        if (intent.resolveActivity(cordova.getActivity().getPackageManager()) != null) {
-            cordova.getActivity().startActivity(chooser);
-        }
-        callbackContext.success();
     }
 
     private void lockLauncher(boolean locked) {

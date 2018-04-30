@@ -1,16 +1,16 @@
 {
-  "name": "cordova-plugin-android-kiosk",
-  "version": "0.0.4",
-  "description": "setup single-use (COSU) devices for android",
+  "name": "cordova-plugin-android-kiosk-nohome",
+  "version": "0.0.1",
+  "description": "setup single-use (COSU) devices for android that are not meant to be the home screen",
   "cordova": {
-    "id": "cordova-plugin-android-kiosk",
+    "id": "cordova-plugin-android-kiosk-nohome",
     "platforms": [
       "android"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shougao/cordova-plugin-android-kiosk.git"
+    "url": "git+https://github.com/mrmcduff/cordova-plugin-android-kiosk.git"
   },
   "keywords": [
     "ecosystem:cordova",
@@ -19,7 +19,7 @@
   "author": "zqc",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shougao/cordova-plugin-android-kiosk/issues"
+    "url": "https://github.com/mrmcduff/cordova-plugin-android-kiosk/issues"
   },
-  "homepage": "https://github.com/shougao/cordova-plugin-android-kiosk#readme"
+  "homepage": "https://github.com/mrmcduff/cordova-plugin-android-kiosk#readme"
 }

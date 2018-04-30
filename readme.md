@@ -1,10 +1,10 @@
 # cordova-plugin-android-kiosk
-Cordova single purpose applicaion plugin for Android. The plugin make user can't excapt from you app because your app is device owner it cann't unpin. 
-your app will start when boot complete or upgrade complete, It is available after Android 5.0 bacause it using the LockTask mode feature .
+Cordova single purpose applicaion plugin for Android. This is a fork of https://github.com/shougao/cordova-plugin-android-kiosk, with the only notable change being
+that the app can no longer act as the home screen.
 
 ## install
 ```
-cordova plugin add cordova-plugin-android-kiosk
+cordova plugin add cordova-plugin-android-kiosk-nohome
 ```
 
 ## usage
@@ -28,12 +28,6 @@ function success(message){
     console.log("locked = " + message); //true or false.
 }
 Kiosk.isLocked(success)
-```
-
-you could switch the launcher using ```switchLauncher```, it will unlock and show launcher chooser.
-
-```
-Kiosk.switchLauncher();
 ```
 
 you have to set you app to the device owner forllow google AOSP design.
